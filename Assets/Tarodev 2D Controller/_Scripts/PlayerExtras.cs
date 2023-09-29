@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,7 @@ namespace TarodevController {
         public float X,Y;
         public bool JumpDown;
         public bool JumpUp;
+        public bool RunDown;
     }
 
     public interface IPlayerController {
