@@ -70,6 +70,6 @@ public class Jump : MonoBehaviour
             }
             velocity.y += jumpSpeed;
         }
-
+        //Debug.Log("Jump");
     }
 }
