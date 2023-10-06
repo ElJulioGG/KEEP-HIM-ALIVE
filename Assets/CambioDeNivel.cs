@@ -3,17 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
-
+using TarodevController;
 
 public class CambioDeNivel : MonoBehaviour
 {
+    public PlayerController playerController;
 
     [SerializeField] BoxCollider2D col2D;
 
     // Start is called before the first frame update
+    private void Start()
+    {
+       
+
+    }
     void Setup()
     {
+
+        playerController.CantInput = true;
+    
+        
         OnTriggerEnter2D(col2D);
     }
 
@@ -21,7 +30,8 @@ public class CambioDeNivel : MonoBehaviour
     {
         if (other.CompareTag("Jugador"))
         {
-            SceneManager.LoadScene("Escena1");
+             
+                //SceneManager.LoadScene("Escena1");
 
         }
     }

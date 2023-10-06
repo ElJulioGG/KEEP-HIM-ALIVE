@@ -1,8 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu(fileName ="PlayerController", menuName ="InputController/PlayerController")]
-public class PlayerController : InputController
+[CreateAssetMenu(fileName ="PlayerController2", menuName ="InputController/PlayerController2")]
+public class PlayerController2 : InputController
 {
     public override bool RetriveJumpInput()
     {
