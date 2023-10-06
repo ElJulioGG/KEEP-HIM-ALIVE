@@ -8,6 +8,7 @@ public class Interacciones : MonoBehaviour
     public bool isInRange;
     public KeyCode interactKey;
     public UnityEvent interactAction;
+    public Animator animator;
 
     void Start()
     {
@@ -21,8 +22,9 @@ public class Interacciones : MonoBehaviour
             if (Input.GetKeyDown(interactKey))
             {
                 interactAction.Invoke();
+                animator.SetTrigger("Pressed");
             }
-
+            animator.SetTrigger("NotPressed");
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)

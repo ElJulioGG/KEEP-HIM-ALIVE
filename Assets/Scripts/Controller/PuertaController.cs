@@ -15,13 +15,13 @@ public class PuertaController : MonoBehaviour
         {
             estaCerrado = false;
             animator.SetBool("Cerrado", estaCerrado);
-            col2D.enabled = true;
+            col2D.enabled = false;
             Debug.Log("Puerta abierta");
         }else
         {
             estaCerrado = true;
             animator.SetBool("Cerrado", estaCerrado);
-            col2D.enabled = false;
+            col2D.enabled = true;
             Debug.Log("Puerta Cerrada");
         }
     }
