@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Serialization;
 using UnityEngine;
 
 
@@ -8,16 +9,17 @@ public class Move : MonoBehaviour
 
 
     [SerializeField] private InputController input = null;
-    [SerializeField, Range(0f, 100f)] private float maxSpeed = 4f;
-    [SerializeField, Range(0f, 100f)] private float maxAcceleration = 35f;
-    [SerializeField, Range(0f, 100f)] private float maxAirAcceleration = 20f;
+    [SerializeField, Range(-100f, 100f)] private float maxSpeed = 4f;
+    [SerializeField, Range(-100f, 100f)] private float maxAcceleration = 35f;
+    [SerializeField, Range(-100f, 100f)] private float maxAirAcceleration = 20f;
 
     private Vector2 direction;
     private Vector2 desiredVelocity;
     private Vector2 velocity;
     private Rigidbody2D body;
     private Ground ground;
-
+    private LayerMask Layer1;
+    private bool CambioDireccion = false;
     private float maxSpeeChange;
     private float acceleration;
     private bool onGround;
@@ -46,7 +48,26 @@ public class Move : MonoBehaviour
         acceleration = onGround ? maxAcceleration : maxAirAcceleration;
         maxSpeeChange = acceleration * Time.deltaTime;
         velocity.x = Mathf.MoveTowards(velocity.x, desiredVelocity.x, maxSpeeChange);
+        
 
         body.velocity = velocity;
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Wall") && !CambioDireccion) {
+            Debug.Log("Colision!");
+            
+                maxSpeed = -maxSpeed;
+                maxAcceleration = -maxAcceleration;
+                maxAirAcceleration = -maxAirAcceleration;
+            CambioDireccion = true;
+           
+        }
+
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        CambioDireccion = false;
+    }
+
 }
