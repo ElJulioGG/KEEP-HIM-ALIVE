@@ -22,7 +22,7 @@ namespace TarodevController
        
         // Public for external hooks
         public Vector3 Velocity { get; private set; }
-        public FrameInput Input { get; private set; }
+        public FrameInput Input { get; protected set; }
         public bool JumpingThisFrame { get; private set; }
         public bool LandingThisFrame { get; private set; }
         public Vector3 RawMovement { get; private set; }

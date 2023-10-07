@@ -20,7 +20,7 @@ public class CambioDeNivel : MonoBehaviour
     void Setup()
     {
 
-        playerController.CantInput = true;
+       
     
         
         OnTriggerEnter2D(col2D);
@@ -31,8 +31,9 @@ public class CambioDeNivel : MonoBehaviour
         if (other.CompareTag("Jugador"))
         {
              
-                //SceneManager.LoadScene("Escena1");
-
+               // SceneManager.LoadScene("Escena1");
+            playerController.CantInput = true;
+            
         }
     }
 
