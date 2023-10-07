@@ -37,6 +37,7 @@ namespace TarodevController
         void Activate() => _active = true;
 
         public bool CantInput;
+       [SerializeField] public bool isOnEnd;
 
         public void SetCantInput(bool cntInput)
         {
@@ -63,6 +64,15 @@ namespace TarodevController
             MoveCharacter(); // Actually perform the axis movement
         }
 
+
+        void OnTriggerStay2D(Collider2D other)
+        {
+            if (other.CompareTag("Salida"))
+            {
+                isOnEnd = true;
+            }
+           // isOnEnd = false;
+        }
 
         #region Gather Input
 

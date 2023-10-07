@@ -4,19 +4,22 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using TarodevController;
+
 public class GameOverScript : MonoBehaviour
 {
-   // public Text pointsText;
+    // public Text pointsText;
 
-   PlayerController playerController;
-   public void Setup(/*int score*/)
+ 
+    public void Start()
+    {
+        
+    }
+    public void Setup(/*int score*/)
     {
         gameObject.SetActive(true);
         // pointsText.text = score.ToString() + " Points ";
-        playerController.CantInput = true;
-
-
+        //playerController.CantInput = true;
+        
 
     }
     public void restartButton()
