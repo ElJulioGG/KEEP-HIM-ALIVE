@@ -22,6 +22,7 @@ public class Move : MonoBehaviour
     private float acceleration;
     private bool onGround;
     public bool isOnEnd;
+    public bool moverDerecha =false;
 
     // Start is called before the first frame update
     void Awake()
@@ -36,7 +37,8 @@ public class Move : MonoBehaviour
     void Update()
     {
         direction.x = input.RetriveMoveInput();
-        if (CambioDeDireccion())
+
+        if (CambioDeDireccion()|| moverDerecha)
         {
             desiredVelocity = new Vector2(direction.x, 0f) * Mathf.Max(maxSpeed - ground.GetFriction(), 0f);
         }
@@ -45,6 +47,7 @@ public class Move : MonoBehaviour
             desiredVelocity = new Vector2(-direction.x, 0f) * Mathf.Max(maxSpeed - ground.GetFriction(), 0f);
         }
     }
+
 
     private void FixedUpdate()
     {
@@ -69,11 +72,24 @@ public class Move : MonoBehaviour
     { //hace que el sprite mire hacia otro el lado si se activa la funcion
         transform.localScale = new Vector2(-(Mathf.Sign(velocity.x)), transform.localScale.y); 
     }
+
+    public void MoverDerecha()
+    { //hace que el sprite mire hacia la derecha
+        moverDerecha = true;
+    }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if(collision.CompareTag("Salida"))
-            {
+        {
             isOnEnd = true;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Salida"))
+        {
+            isOnEnd = false;
         }
     }
 }

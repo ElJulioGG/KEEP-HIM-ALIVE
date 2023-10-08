@@ -71,7 +71,14 @@ namespace TarodevController
             {
                 isOnEnd = true;
             }
-           // isOnEnd = false;
+           
+        }
+        private void OnTriggerExit2D(Collider2D collision)
+        {
+            if (collision.CompareTag("Salida"))
+            {
+                isOnEnd = false;
+            }
         }
 
         #region Gather Input

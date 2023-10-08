@@ -26,7 +26,6 @@ public class CambioDeNivel : MonoBehaviour
         if ((playerController.isOnEnd == true) && (move.isOnEnd == true))
         {
             Action.Invoke();
-            
         }
     }
 
@@ -44,6 +43,7 @@ public class CambioDeNivel : MonoBehaviour
     {
         if ((playerController.isOnEnd == true )&& (move.isOnEnd == true))
         {
+            SceneManager.LoadScene("Escena1");
             playerController.CantInput = true;
         }
     }
