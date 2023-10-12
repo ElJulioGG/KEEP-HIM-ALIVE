@@ -18,8 +18,7 @@ namespace TarodevController
     /// </summary>
     public class PlayerController : MonoBehaviour, IPlayerController
     {
-        
-       
+        public Animator animator;
         // Public for external hooks
         public Vector3 Velocity { get; private set; }
         public FrameInput Input { get; protected set; }
@@ -29,7 +28,7 @@ namespace TarodevController
         public bool Grounded => _colDown;
 
         private Vector3 _lastPosition;
-        private float _currentHorizontalSpeed, _currentVerticalSpeed;
+        [SerializeField] public float _currentHorizontalSpeed, _currentVerticalSpeed;
 
         // This is horrible, but for some reason colliders are not fully established when update starts...
         private bool _active;
@@ -38,7 +37,8 @@ namespace TarodevController
 
         public bool CantInput;
        [SerializeField] public bool isOnEnd;
-
+        bool derecha = true;
+        public bool isRunning;
         public void SetCantInput(bool cntInput)
         {
             CantInput = cntInput;
@@ -52,6 +52,24 @@ namespace TarodevController
             Velocity = (transform.position - _lastPosition) / Time.deltaTime;
             _lastPosition = transform.position;
 
+            animator.SetFloat("Speed", Mathf.Abs(_currentHorizontalSpeed));
+            animator.SetFloat("verticalSpeed", _currentVerticalSpeed);
+            if (Grounded)
+            {
+                animator.SetBool("isJumping", false);
+            }
+            else
+            {
+                animator.SetBool("isJumping", true);
+            }
+            if (_currentHorizontalSpeed > 0 && !derecha)
+            {
+                flip();
+            }
+            if (_currentHorizontalSpeed < 0 && derecha)
+            {
+                flip();
+            }
             GatherInput();
 
             RunCollisionChecks();
@@ -62,8 +80,18 @@ namespace TarodevController
             CalculateJump(); // Possibly overrides vertical
 
             MoveCharacter(); // Actually perform the axis movement
+          
         }
+        void flip()
+        {
+            Vector3 characterScale = transform.localScale;
+            characterScale.x *= -1;
 
+            transform.localScale = characterScale;
+
+            derecha = !derecha;
+            Debug.Log("flip");
+        }
 
         void OnTriggerStay2D(Collider2D other)
         {
@@ -213,10 +241,14 @@ namespace TarodevController
             if (Input.RunDown)
             {
                 _moveClamp = _moveClampSpeed * _runSpeed;
+                isRunning = true;
+                animator.SetBool("isRunning", true);
             }
             else
             {
                 _moveClamp = _moveClampSpeed;
+                isRunning = false;
+                animator.SetBool("isRunning", false);
             }
             if (Input.X != 0)
             {
@@ -234,11 +266,14 @@ namespace TarodevController
                 //    _currentHorizontalSpeed = _currentHorizontalSpeed * _runSpeed;
                 //}
                 _currentHorizontalSpeed += apexBonus * Time.deltaTime;
+                animator.SetBool("isNotInput", false);
             }
             else
             {
                 // No input. Let's slow the character down
                 _currentHorizontalSpeed = Mathf.MoveTowards(_currentHorizontalSpeed, 0, _deAcceleration * Time.deltaTime);
+                animator.SetBool("isNotInput", true);
+
             }
 
             if (_currentHorizontalSpeed > 0 && _colRight || _currentHorizontalSpeed < 0 && _colLeft)
@@ -319,10 +354,12 @@ namespace TarodevController
                 _coyoteUsable = false;
                 _timeLeftGrounded = float.MinValue;
                 JumpingThisFrame = true;
+                animator.SetBool("jumpingThisFrame", true);
             }
             else
             {
                 JumpingThisFrame = false;
+                animator.SetBool("jumpingThisFrame", false);
             }
 
             // End the jump early if button released

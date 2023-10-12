@@ -11,7 +11,7 @@ public class Jump : MonoBehaviour
     [SerializeField, Range(0f, 5f)] private float downwardMovementMultiplier = 3f;
     [SerializeField, Range(0f, 5f)] private float upwardMovementMultiplier = 1.7f;
 
-
+    public Animator animator;
     private Rigidbody2D body;
     private Ground ground;
     private Vector2 velocity;
@@ -19,7 +19,7 @@ public class Jump : MonoBehaviour
     private float defaultGravityScale;
 
     private bool desiredJump;
-    private bool onGround;
+    [SerializeField] private bool onGround;
 
     // Start is called before the first frame update
     void Awake()
@@ -42,7 +42,9 @@ public class Jump : MonoBehaviour
         if (onGround)
         {
             jumpPhase = 0;
+            
         }
+       
         if (desiredJump)
         {
             desiredJump = false;
@@ -51,6 +53,10 @@ public class Jump : MonoBehaviour
         if (body.velocity.y > 0)
         {
             body.gravityScale = upwardMovementMultiplier;
+        }
+        else if (body.velocity.y < 0)
+        {
+            body.gravityScale = downwardMovementMultiplier;
         }
         else if(body.velocity.y == 0)
         {
@@ -69,7 +75,9 @@ public class Jump : MonoBehaviour
                 jumpSpeed = Mathf.Max(jumpSpeed - velocity.y, 0f);
             }
             velocity.y += jumpSpeed;
+            
         }
         //Debug.Log("Jump");
     }
+
 }

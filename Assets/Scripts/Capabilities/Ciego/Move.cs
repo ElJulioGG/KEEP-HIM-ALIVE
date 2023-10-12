@@ -23,6 +23,7 @@ public class Move : MonoBehaviour
     private bool onGround;
     public bool isOnEnd;
     public bool moverDerecha =false;
+    public Animator animator;
 
     // Start is called before the first frame update
     void Awake()
@@ -46,6 +47,14 @@ public class Move : MonoBehaviour
         {
             desiredVelocity = new Vector2(-direction.x, 0f) * Mathf.Max(maxSpeed - ground.GetFriction(), 0f);
         }
+        if (onGround)
+        {
+            animator.SetBool("isJumping", false);
+        }
+        if(!onGround){
+            animator.SetBool("isJumping", true);
+        }
+
     }
 
 
@@ -78,6 +87,8 @@ public class Move : MonoBehaviour
         moverDerecha = true;
     }
 
+
+    //Para checkear la salida del nivel
     private void OnTriggerStay2D(Collider2D collision)
     {
         if(collision.CompareTag("Salida"))
