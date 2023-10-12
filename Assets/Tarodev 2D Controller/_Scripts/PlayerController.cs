@@ -18,6 +18,7 @@ namespace TarodevController
     /// </summary>
     public class PlayerController : MonoBehaviour, IPlayerController
     {
+
         public Animator animator;
         // Public for external hooks
         public Vector3 Velocity { get; private set; }
@@ -60,6 +61,7 @@ namespace TarodevController
             }
             else
             {
+                
                 animator.SetBool("isJumping", true);
             }
             if (_currentHorizontalSpeed > 0 && !derecha)
