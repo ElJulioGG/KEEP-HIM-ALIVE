@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Xml.Serialization;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Move : MonoBehaviour
 {
@@ -24,8 +25,14 @@ public class Move : MonoBehaviour
     public bool isOnEnd;
     public bool moverDerecha =false;
     public Animator animator;
+    public UnityEvent evento;
+    public bool IsEnabled = false;
 
     // Start is called before the first frame update
+    private void Start()
+    {
+        Invoke("MakeEnabled", 2f);
+    }
     void Awake()
     {
         body = GetComponent<Rigidbody2D>();
@@ -37,24 +44,27 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        direction.x = input.RetriveMoveInput();
+        if (IsEnabled)
+        {
+            direction.x = input.RetriveMoveInput();
 
-        if (CambioDeDireccion()|| moverDerecha)
-        {
-            desiredVelocity = new Vector2(direction.x, 0f) * Mathf.Max(maxSpeed - ground.GetFriction(), 0f);
+            if (CambioDeDireccion() || moverDerecha)
+            {
+                desiredVelocity = new Vector2(direction.x, 0f) * Mathf.Max(maxSpeed - ground.GetFriction(), 0f);
+            }
+            else
+            {
+                desiredVelocity = new Vector2(-direction.x, 0f) * Mathf.Max(maxSpeed - ground.GetFriction(), 0f);
+            }
+            if (onGround)
+            {
+                animator.SetBool("isJumping", false);
+            }
+            if (!onGround)
+            {
+                animator.SetBool("isJumping", true);
+            }
         }
-        else
-        {
-            desiredVelocity = new Vector2(-direction.x, 0f) * Mathf.Max(maxSpeed - ground.GetFriction(), 0f);
-        }
-        if (onGround)
-        {
-            animator.SetBool("isJumping", false);
-        }
-        if(!onGround){
-            animator.SetBool("isJumping", true);
-        }
-
     }
 
 
@@ -70,6 +80,11 @@ public class Move : MonoBehaviour
         
         
         body.velocity = velocity;
+    }
+    void MakeEnabled()
+    {
+        IsEnabled = true;
+        evento.Invoke();
     }
     private bool CambioDeDireccion()
     {

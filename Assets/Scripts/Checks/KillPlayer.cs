@@ -14,6 +14,9 @@ public class KillPlayer : MonoBehaviour
 
     // Start is called before the first frame update
     public GameOverScript gameOverScript;
+
+
+    bool death = false;
     public void Start()
     {
         // playerController = GetComponent<PlayerController>();
@@ -39,7 +42,12 @@ public class KillPlayer : MonoBehaviour
             else
                 Character.SetActive(false);
             AudioManager.instance.PlaySfx("Death");
-            gameOverScript.Setup();
+
+            if (!death)
+            {
+                gameOverScript.Setup();
+                death = true;
+            }
 
         }
     }

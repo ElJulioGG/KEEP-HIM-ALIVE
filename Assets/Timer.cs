@@ -8,16 +8,16 @@ public class Timer : MonoBehaviour
     [SerializeField] private TMP_Text timerText;
     private float timeElapsed;
     private int minutos, segundos, centesimas;
-    private bool alive = true;
+    private bool alive = false;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Invoke("Resume",2f);
     }
     void Setup()
     {
         gameObject.SetActive(true);
-        alive = true;
+        alive = false;
     }
     // Update is called once per frame
     private void Update()
@@ -35,6 +35,10 @@ public class Timer : MonoBehaviour
     public void Pause()
     {
         alive = false;
+    }
+    public void Resume()
+    {
+        alive = true;
     }
     void SetDown()
     {

@@ -9,9 +9,9 @@ public class FadeIn : MonoBehaviour
     void Start()
     {
         rend = GetComponent<SpriteRenderer>();
-        //Color c =  rend.material.color;
-        //c.a = 0f;
-        //rend.material.color = c;
+        Color c =  rend.material.color;
+        c.a = 0f;
+        rend.material.color = c;
     }
 
     IEnumerator FadeInFunction()

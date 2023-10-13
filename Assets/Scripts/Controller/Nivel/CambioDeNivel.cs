@@ -55,8 +55,10 @@ public class CambioDeNivel : MonoBehaviour
     }
     void cambiarDeEscena()
     {
-        SceneManager.LoadScene("Escena1");
+        //GameManager.instance.EsceneNumber += 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
     }
+    
 
     void OnTriggerStay2D(Collider2D other)
     {

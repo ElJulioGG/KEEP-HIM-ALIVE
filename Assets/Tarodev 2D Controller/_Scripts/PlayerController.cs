@@ -18,7 +18,7 @@ namespace TarodevController
     /// </summary>
     public class PlayerController : MonoBehaviour, IPlayerController
     {
-
+        public UnityEvent evento;
         public Animator animator;
         // Public for external hooks
         public Vector3 Velocity { get; private set; }
@@ -40,49 +40,66 @@ namespace TarodevController
        [SerializeField] public bool isOnEnd;
         bool derecha = true;
         public bool isRunning;
+
+        public bool isEnabled = false;
         public void SetCantInput(bool cntInput)
         {
             CantInput = cntInput;
         }
 
+        private void Start()
+        {
+            Invoke("MakeEnabled", 2f);
+        }
 
         private void Update()
         {
-            if (!_active) return;
-            // Calculate velocity
-            Velocity = (transform.position - _lastPosition) / Time.deltaTime;
-            _lastPosition = transform.position;
-
-            animator.SetFloat("Speed", Mathf.Abs(_currentHorizontalSpeed));
-            animator.SetFloat("verticalSpeed", _currentVerticalSpeed);
-            if (Grounded)
+            if (isEnabled)
             {
-                animator.SetBool("isJumping", false);
-            }
-            else
-            {
-                
-                animator.SetBool("isJumping", true);
-            }
-            if (_currentHorizontalSpeed > 0 && !derecha)
-            {
-                flip();
-            }
-            if (_currentHorizontalSpeed < 0 && derecha)
-            {
-                flip();
-            }
-            GatherInput();
+                if (!_active) return;
+                // Calculate velocity
+                Velocity = (transform.position - _lastPosition) / Time.deltaTime;
+                _lastPosition = transform.position;
 
-            RunCollisionChecks();
+                animator.SetFloat("Speed", Mathf.Abs(_currentHorizontalSpeed));
+                animator.SetFloat("verticalSpeed", _currentVerticalSpeed);
+                if (Grounded)
+                {
+                    animator.SetBool("isJumping", false);
+                }
+                else
+                {
+                    animator.SetBool("isJumping", true);
+                }
+                if (_currentHorizontalSpeed > 0 && !derecha)
+                {
+                    flip();
+                }
+                if (_currentHorizontalSpeed < 0 && derecha)
+                {
+                    flip();
+                }
+                GatherInput();
 
-            CalculateWalk(); // Horizontal movement
-            CalculateJumpApex(); // Affects fall speed, so calculate before gravity
-            CalculateGravity(); // Vertical movement
-            CalculateJump(); // Possibly overrides vertical
+                RunCollisionChecks();
 
-            MoveCharacter(); // Actually perform the axis movement
-          
+                CalculateWalk(); // Horizontal movement
+                CalculateJumpApex(); // Affects fall speed, so calculate before gravity
+                CalculateGravity(); // Vertical movement
+                CalculateJump(); // Possibly overrides vertical
+
+                MoveCharacter(); // Actually perform the axis movement
+                if (!Grounded || _currentHorizontalSpeed == 0)
+                {
+                    AudioManager.instance.FootStepsSource.Stop();
+                }
+            }
+        }
+
+        void MakeEnabled()
+        {
+            evento.Invoke();
+            isEnabled = true;
         }
         void flip()
         {
@@ -242,19 +259,29 @@ namespace TarodevController
 
             if (Input.RunDown)
             {
+                
                 _moveClamp = _moveClampSpeed * _runSpeed;
                 isRunning = true;
                 animator.SetBool("isRunning", true);
             }
             else
             {
+                
                 _moveClamp = _moveClampSpeed;
                 isRunning = false;
                 animator.SetBool("isRunning", false);
             }
             if (Input.X != 0)
             {
-
+                if (!AudioManager.instance.FootStepsSource.isPlaying && isRunning && Grounded /*&& _currentHorizontalSpeed>10*/)
+                {
+                    AudioManager.instance.PlayFootSteps("DogRun");
+                }
+                if (!AudioManager.instance.FootStepsSource.isPlaying && !isRunning && Grounded /*&& _currentHorizontalSpeed < 10*/)
+                {
+                    AudioManager.instance.PlayFootSteps("DogWalk");
+                }
+                
                 // Set horizontal move speed
                 _currentHorizontalSpeed += Input.X * _acceleration * Time.deltaTime;
 

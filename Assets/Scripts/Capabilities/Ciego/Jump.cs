@@ -68,6 +68,7 @@ public class Jump : MonoBehaviour
     {
         if(onGround||jumpPhase< maxAirJumps)
         {
+            int randomIndex = Random.Range(0, 5);
             jumpPhase += 1;
             float jumpSpeed = Mathf.Sqrt(-2f * Physics2D.gravity.y * jumpHeight);
             if(velocity.y > 0f)
@@ -75,7 +76,28 @@ public class Jump : MonoBehaviour
                 jumpSpeed = Mathf.Max(jumpSpeed - velocity.y, 0f);
             }
             velocity.y += jumpSpeed;
-            
+            switch (randomIndex)
+            {
+                case 0:
+                    AudioManager.instance.PlayBark("BarkA01");
+                    break;
+                case 1:
+                    AudioManager.instance.PlayBark("BarkA02");
+                    break;
+                case 2:
+                    AudioManager.instance.PlayBark("BarkA03");
+                    break;
+                case 3:
+                    AudioManager.instance.PlayBark("BarkA04");
+                    break;
+                case 4:
+                    AudioManager.instance.PlayBark("BarkA05");
+                    break;
+                case 5:
+                    AudioManager.instance.PlayBark("BarkA06");
+                    break;
+            }
+           
         }
         //Debug.Log("Jump");
     }

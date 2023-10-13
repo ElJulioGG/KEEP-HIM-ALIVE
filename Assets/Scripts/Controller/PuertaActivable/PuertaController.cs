@@ -7,20 +7,23 @@ public class PuertaController : MonoBehaviour
 
     [SerializeField] BoxCollider2D col2D;
     public bool estaCerrado;
-    public Animator animator;
-    
+    public Animator animatorBoton;
+    public Animator animatorPuerta;
+
     public void OpenPuerta()
     {
         if (estaCerrado)
         {
             estaCerrado = false;
-            animator.SetBool("Cerrado", estaCerrado);
+            animatorBoton.SetBool("Cerrado", estaCerrado);
+            animatorPuerta.SetBool("Cerrado", estaCerrado);
             col2D.enabled = false;
             Debug.Log("Puerta abierta");
         }else
         {
             estaCerrado = true;
-            animator.SetBool("Cerrado", estaCerrado);
+            animatorBoton.SetBool("Cerrado", estaCerrado);
+            animatorPuerta.SetBool("Cerrado", estaCerrado);
             col2D.enabled = true;
             Debug.Log("Puerta Cerrada");
         }

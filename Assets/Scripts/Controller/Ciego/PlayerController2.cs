@@ -6,7 +6,7 @@ public class PlayerController2 : InputController
 {
     public override bool RetriveJumpInput()
     {
-        return Input.GetButtonDown("Jump");
+        return Input.GetButtonDown("Bark");
     }
 
     public override float RetriveMoveInput()
