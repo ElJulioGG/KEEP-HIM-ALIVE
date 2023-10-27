@@ -91,7 +91,7 @@ namespace TarodevController
                 MoveCharacter(); // Actually perform the axis movement
                 if (!Grounded || _currentHorizontalSpeed == 0)
                 {
-                    AudioManager.instance.FootStepsSource.Stop();
+                    //AudioManager.instance.FootStepsSource.Stop();
                 }
             }
         }

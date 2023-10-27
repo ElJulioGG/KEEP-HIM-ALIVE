@@ -31,6 +31,7 @@ public class Ground : MonoBehaviour
         if (((1 << collision.gameObject.layer) & platformLayerMask) != 0)
         {
             onGround = true;
+            print("OnGround");
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -39,6 +40,7 @@ public class Ground : MonoBehaviour
         {
             onGround = false;
             friction = 0;
+            print("Not OnGround");
         }
     }
     private void OnCollisionExit2D(Collision2D collision)

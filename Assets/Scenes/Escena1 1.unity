@@ -552,8 +552,12 @@ MonoBehaviour:
   sfxSounds:
   - name: Death
     clip: {fileID: 8300000, guid: cb6b4fe9931b464468d563e9cf45fc7d, type: 3}
+  FootStepsSounds: []
+  BarkSounds: []
   musicSource: {fileID: 1327946447}
   sfxSource: {fileID: 1317972426}
+  FootStepsSource: {fileID: 0}
+  BarkSource: {fileID: 0}
 --- !u!1 &286854014
 GameObject:
   m_ObjectHideFlags: 0
@@ -904,6 +908,7 @@ MonoBehaviour:
   Fade:
     m_PersistentCalls:
       m_Calls: []
+  moveCamera: 0
 --- !u!61 &418155204
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3105,6 +3110,10 @@ MonoBehaviour:
   isOnEnd: 0
   moverDerecha: 0
   animator: {fileID: 1553364924}
+  evento:
+    m_PersistentCalls:
+      m_Calls: []
+  IsEnabled: 0
 --- !u!96 &1553364919
 TrailRenderer:
   serializedVersion: 2
@@ -3611,6 +3620,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 733972a676d125649a117f7294642f6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadein:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1646304793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4414,7 +4426,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1861791826}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.54, y: 2.75, z: 0}
+  m_LocalPosition: {x: 9.53, y: 17.18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

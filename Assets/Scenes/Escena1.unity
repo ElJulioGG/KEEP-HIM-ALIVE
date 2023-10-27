@@ -7416,7 +7416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   input: {fileID: 11400000, guid: ab8c3aabad20aa64b98810c85404d4fd, type: 2}
-  jumpHeight: 3
+  jumpHeight: 3.5
   maxAirJumps: 0
   downwardMovementMultiplier: 2.5
   upwardMovementMultiplier: 1.5

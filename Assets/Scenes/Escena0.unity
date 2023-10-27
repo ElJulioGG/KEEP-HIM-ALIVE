@@ -7304,7 +7304,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   input: {fileID: 11400000, guid: ab8c3aabad20aa64b98810c85404d4fd, type: 2}
-  jumpHeight: 3
+  jumpHeight: 3.5
   maxAirJumps: 0
   downwardMovementMultiplier: 2.5
   upwardMovementMultiplier: 1.5
@@ -7501,7 +7501,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 2, y: 2}
-    newSize: {x: 1, y: 1}
+    newSize: {x: 2, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -7571,15 +7571,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 919743124, guid: c779a1e5058b4dd45b041f36ec2e0895, type: 3}
+  m_Sprite: {fileID: 919743124, guid: b9d69fddb3bf12445a1c82c8f23df17d, type: 3}
   m_Color: {r: 0.9960785, g: 0.9294118, b: 0.8470589, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1553364923
