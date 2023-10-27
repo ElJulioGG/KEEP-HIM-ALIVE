@@ -23,6 +23,7 @@ public class Interacciones : MonoBehaviour
             {
                 interactAction.Invoke();
                 animator.SetTrigger("Pressed");
+                
             }
             animator.SetTrigger("NotPressed");
         }
@@ -31,6 +32,7 @@ public class Interacciones : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Jugador"))
         {
+            
             isInRange = true;
             Debug.Log("esta en rango");
 

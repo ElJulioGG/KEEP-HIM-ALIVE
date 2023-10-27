@@ -6,8 +6,8 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
-    public Sounds[] musicSounds, sfxSounds, FootStepsSounds, BarkSounds;
-    public AudioSource musicSource, sfxSource, FootStepsSource, BarkSource;
+    public Sounds[] musicSounds, sfxSounds, FootStepsSounds, BarkSounds, DoorSounds;
+    public AudioSource musicSource, sfxSource, FootStepsSource, BarkSource, DoorSource;
 
     private void Awake()
     {
@@ -74,6 +74,18 @@ public class AudioManager : MonoBehaviour
         else
         {
             BarkSource.PlayOneShot(s.clip);
+        }
+    }
+    public void PlayDoor(string name)
+    {
+        Sounds s = Array.Find(DoorSounds, x => x.name == name);
+        if (s == null)
+        {
+            Debug.Log("sound not found");
+        }
+        else
+        {
+            DoorSource.PlayOneShot(s.clip);
         }
     }
 }

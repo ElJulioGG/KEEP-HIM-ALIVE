@@ -20,7 +20,7 @@ public class KillPlayer : MonoBehaviour
     public void Start()
     {
         // playerController = GetComponent<PlayerController>();
-        gameOverScript = GameObject.Find("background").GetComponent<GameOverScript>();
+        //gameOverScript = GameObject.Find("background").GetComponent<GameOverScript>();
 
     }
 

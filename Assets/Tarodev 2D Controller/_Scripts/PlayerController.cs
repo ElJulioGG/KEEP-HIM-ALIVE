@@ -378,17 +378,21 @@ namespace TarodevController
             // Jump if: grounded or within coyote threshold || sufficient jump buffer
             if (Input.JumpDown && CanUseCoyote || HasBufferedJump)
             {
+                AudioManager.instance.PlaySfx("DogJump");
                 _currentVerticalSpeed = _jumpHeight;
                 _endedJumpEarly = false;
                 _coyoteUsable = false;
                 _timeLeftGrounded = float.MinValue;
                 JumpingThisFrame = true;
                 animator.SetBool("jumpingThisFrame", true);
+                
+
             }
             else
             {
                 JumpingThisFrame = false;
                 animator.SetBool("jumpingThisFrame", false);
+                
             }
 
             // End the jump early if button released

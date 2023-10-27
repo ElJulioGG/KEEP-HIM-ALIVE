@@ -34,6 +34,7 @@ public class InteraccionSalida : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Jugador") || collision.gameObject.CompareTag("Ciego"))
         {
+            if(animator.GetBool("Cerrado"))AudioManager.instance.PlayDoor("DoorOpen");
             isInRange = true;
             Debug.Log("esta en rango");
 
@@ -44,6 +45,7 @@ public class InteraccionSalida : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Jugador") || collision.gameObject.CompareTag("Ciego"))
         {
+            if (animator.GetBool("Abierto")) AudioManager.instance.PlayDoor("DoorOpen");
             isInRange = false;
             Debug.Log("ya no esta en rango");
 

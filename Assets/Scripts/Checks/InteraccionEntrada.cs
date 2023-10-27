@@ -24,6 +24,7 @@ public class InteraccionEntrada : MonoBehaviour
         {
             if (!cerrar) {
                 animator.SetBool("Abierto", true);
+                
             }
             animator.SetBool("Cerrado", false);
         }
@@ -37,6 +38,7 @@ public class InteraccionEntrada : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Jugador") /*|| collision.gameObject.CompareTag("Ciego")*/)
         {
+            
             isInRange = true;
             Debug.Log("esta en rango");
 
@@ -46,6 +48,10 @@ public class InteraccionEntrada : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Jugador") /*|| collision.gameObject.CompareTag("Ciego")*/)
         {
+            if (!cerrar)
+            {
+                AudioManager.instance.PlayDoor("DoorOpen");
+            }
             isInRange = false;
             Debug.Log("ya no esta en rango");
             cerrar = true;
