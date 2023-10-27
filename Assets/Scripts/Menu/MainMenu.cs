@@ -25,10 +25,14 @@ public class MainMenu : MonoBehaviour
         AudioManager.instance.musicSource.Stop();
         SceneManager.LoadScene(1);
     }
-    public void EscendaMenu() {
+    public void EscenaMenu() {
         SceneManager.LoadScene("Menu");
     }
     public void EscenaSeleccionarNivel() {
         SceneManager.LoadScene("SeleccionarNivel");
+    }
+    public void EscenaCred()
+    {
+        SceneManager.LoadScene("Creditos");
     }
 }
