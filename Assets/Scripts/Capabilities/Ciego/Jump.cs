@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Jump : MonoBehaviour
 {
-
+    public GameObject FloatingTextPrefab;
+    public GameObject Dog;
     [SerializeField] private InputController input = null;
     [SerializeField, Range(0f, 10f)] private float jumpHeight = 3f;
     [SerializeField, Range(0, 5)] private int maxAirJumps = 0;
@@ -66,8 +67,9 @@ public class Jump : MonoBehaviour
     }
     private void JumpAction()
     {
-        if(onGround||jumpPhase< maxAirJumps)
+        if (onGround || jumpPhase < maxAirJumps)
         {
+            
             int randomIndex = Random.Range(0, 5);
             jumpPhase += 1;
             float jumpSpeed = Mathf.Sqrt(-2f * Physics2D.gravity.y * jumpHeight);
@@ -76,6 +78,7 @@ public class Jump : MonoBehaviour
                 jumpSpeed = Mathf.Max(jumpSpeed - velocity.y, 0f);
             }
             velocity.y += jumpSpeed;
+            
             switch (randomIndex)
             {
                 case 0:
@@ -97,9 +100,19 @@ public class Jump : MonoBehaviour
                     AudioManager.instance.PlayBark("BarkA06");
                     break;
             }
-           
+            if (FloatingTextPrefab)
+            {
+                showFloatingText();
+            }
         }
         //Debug.Log("Jump");
+    }
+
+    void showFloatingText()
+    {
+        Instantiate(FloatingTextPrefab, Dog.transform.position, Quaternion.identity, Dog.transform);
+
+
     }
 
 }
