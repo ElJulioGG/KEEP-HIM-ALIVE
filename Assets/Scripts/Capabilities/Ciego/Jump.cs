@@ -108,11 +108,10 @@ public class Jump : MonoBehaviour
         //Debug.Log("Jump");
     }
 
+    
     void showFloatingText()
     {
-        Instantiate(FloatingTextPrefab, Dog.transform.position, Quaternion.identity, Dog.transform);
-
-
+        Instantiate(FloatingTextPrefab, Dog.transform.position, Quaternion.identity); //ampliar con el dog.transform si es necesario
     }
 
 }

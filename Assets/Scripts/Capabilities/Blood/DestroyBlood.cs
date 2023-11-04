@@ -7,7 +7,7 @@ public class DestroyBlood : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Destroy(gameObject, 20f);
+        Destroy(gameObject, 10f);
         //print("Destroyed");
     }
 
@@ -15,5 +15,9 @@ public class DestroyBlood : MonoBehaviour
     void Update()
     {
         
+    }
+    void OnDestroy()
+    {
+        Debug.Log("The object has been destroyed!");
     }
 }
