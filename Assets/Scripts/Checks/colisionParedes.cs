@@ -9,6 +9,9 @@ public class colisionParedes : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        move.debeGirar();
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Platform"))
+        {
+            move.debeGirar();
+        }
     }
 }

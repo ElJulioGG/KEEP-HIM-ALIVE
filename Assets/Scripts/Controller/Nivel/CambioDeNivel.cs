@@ -30,7 +30,7 @@ public class CambioDeNivel : MonoBehaviour
     {
         if ((playerController.isOnEnd == true) && (move.isOnEnd == true))
         {
-
+            print("daw"); 
             Invoke("CambioDeCamara", 2f);
             Action.Invoke();
         }

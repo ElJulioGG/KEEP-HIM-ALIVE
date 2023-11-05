@@ -19773,12 +19773,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbfb23717f7dee14688bccda60b77b9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  evento:
+    m_PersistentCalls:
+      m_Calls: []
   animator: {fileID: 377760150854562741}
   _currentHorizontalSpeed: 0
   _currentVerticalSpeed: 0
   CantInput: 0
   isOnEnd: 0
   isRunning: 0
+  isEnabled: 0
   _characterBounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0.6, y: 0.45, z: 0}
@@ -19847,7 +19851,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.33, y: 1}
+  m_Size: {x: 1.42, y: 1.13}
   m_EdgeRadius: 0
 --- !u!1 &6663966585558274103
 GameObject:

@@ -6,16 +6,11 @@ using UnityEngine;
 using TarodevController;
 
 using UnityEngine.Events;
+using System.Runtime.CompilerServices;
 
 namespace TarodevController
 {
-    /// <summary>
-    /// Hey!
-    /// Tarodev here. I built this controller as there was a severe lack of quality & free 2D controllers out there.
-    /// Right now it only contains movement and jumping, but it should be pretty easy to expand... I may even do it myself
-    /// if there's enough interest. You can play and compete for best times here: https://tarodev.itch.io/
-    /// If you hve any questions or would like to brag about your score, come to discord: https://discord.gg/GqeHHnhHpz
-    /// </summary>
+   
     public class PlayerController : MonoBehaviour, IPlayerController
     {
         public UnityEvent evento;
@@ -23,7 +18,7 @@ namespace TarodevController
         // Public for external hooks
         public Vector3 Velocity { get; private set; }
         public FrameInput Input { get; protected set; }
-        public bool JumpingThisFrame { get; private set; }
+        public bool JumpingThisFrame { get; set; }
         public bool LandingThisFrame { get; private set; }
         public Vector3 RawMovement { get; private set; }
         public bool Grounded => _colDown;
@@ -56,6 +51,11 @@ namespace TarodevController
         {
             if (isEnabled)
             {
+                if (!Grounded)
+                {
+                    AudioManager.instance.FootStepsSource.Stop();
+                }
+                //OnJumpPad =false;
                 if (!_active) return;
                 // Calculate velocity
                 Velocity = (transform.position - _lastPosition) / Time.deltaTime;
@@ -70,7 +70,9 @@ namespace TarodevController
                 else
                 {
                     animator.SetBool("isJumping", true);
+                    //animator.SetBool("jumpingThisFrame", true);
                 }
+                
                 if (_currentHorizontalSpeed > 0 && !derecha)
                 {
                     flip();
@@ -302,7 +304,7 @@ namespace TarodevController
                 // No input. Let's slow the character down
                 _currentHorizontalSpeed = Mathf.MoveTowards(_currentHorizontalSpeed, 0, _deAcceleration * Time.deltaTime);
                 animator.SetBool("isNotInput", true);
-
+                AudioManager.instance.FootStepsSource.Stop();
             }
 
             if (_currentHorizontalSpeed > 0 && _colRight || _currentHorizontalSpeed < 0 && _colLeft)
@@ -321,7 +323,7 @@ namespace TarodevController
         [Header("GRAVITY")][SerializeField] private float _fallClamp = -40f;
         [SerializeField] private float _minFallSpeed = 80f;
         [SerializeField] private float _maxFallSpeed = 120f;
-        private float _fallSpeed;
+        [SerializeField] private float _fallSpeed;
 
         private void CalculateGravity()
         {
@@ -347,17 +349,17 @@ namespace TarodevController
 
         #region Jump
 
-        [Header("JUMPING")][SerializeField] private float _jumpHeight = 30;
+        [Header("JUMPING")][SerializeField] public float _jumpHeight = 30;
         [SerializeField] private float _jumpApexThreshold = 10f;
         [SerializeField] private float _coyoteTimeThreshold = 0.1f;
         [SerializeField] private float _jumpBuffer = 0.1f;
         [SerializeField] private float _jumpEndEarlyGravityModifier = 3;
-        private bool _coyoteUsable;
-        private bool _endedJumpEarly = true;
-        private float _apexPoint; // Becomes 1 at the apex of a jump
-        private float _lastJumpPressed;
-        private bool CanUseCoyote => _coyoteUsable && !_colDown && _timeLeftGrounded + _coyoteTimeThreshold > Time.time;
-        private bool HasBufferedJump => _colDown && _lastJumpPressed + _jumpBuffer > Time.time;
+        [SerializeField] private bool _coyoteUsable;
+        [SerializeField] public bool _endedJumpEarly = true;
+        [SerializeField] public float _apexPoint; // Becomes 1 at the apex of a jump
+        [SerializeField] private float _lastJumpPressed;
+        [SerializeField] private bool CanUseCoyote => _coyoteUsable && !_colDown && _timeLeftGrounded + _coyoteTimeThreshold > Time.time;
+        [SerializeField] private bool HasBufferedJump => _colDown && _lastJumpPressed + _jumpBuffer > Time.time;
 
         private void CalculateJumpApex()
         {
@@ -376,7 +378,7 @@ namespace TarodevController
         private void CalculateJump()
         {
             // Jump if: grounded or within coyote threshold || sufficient jump buffer
-            if (Input.JumpDown && CanUseCoyote || HasBufferedJump)
+            if (Input.JumpDown && CanUseCoyote || HasBufferedJump )
             {
                 AudioManager.instance.PlaySfx("DogJump");
                 _currentVerticalSpeed = _jumpHeight;
@@ -384,15 +386,14 @@ namespace TarodevController
                 _coyoteUsable = false;
                 _timeLeftGrounded = float.MinValue;
                 JumpingThisFrame = true;
-                animator.SetBool("jumpingThisFrame", true);
-                
+                animator.SetTrigger("jumpingThisFrame");
+                AudioManager.instance.FootStepsSource.Stop();
 
             }
             else
             {
                 JumpingThisFrame = false;
-                animator.SetBool("jumpingThisFrame", false);
-                
+
             }
 
             // End the jump early if button released
