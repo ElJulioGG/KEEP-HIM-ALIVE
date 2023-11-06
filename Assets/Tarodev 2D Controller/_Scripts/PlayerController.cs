@@ -51,7 +51,7 @@ namespace TarodevController
         {
             if (isEnabled)
             {
-                if (!Grounded)
+                if (!Grounded|| Mathf.Abs(_currentHorizontalSpeed) == 0)
                 {
                     AudioManager.instance.FootStepsSource.Stop();
                 }
@@ -275,11 +275,11 @@ namespace TarodevController
             }
             if (Input.X != 0)
             {
-                if (!AudioManager.instance.FootStepsSource.isPlaying && isRunning && Grounded /*&& _currentHorizontalSpeed>10*/)
+                if (!AudioManager.instance.FootStepsSource.isPlaying && isRunning && Grounded && Mathf.Abs(_currentHorizontalSpeed) >0)
                 {
                     AudioManager.instance.PlayFootSteps("DogRun");
                 }
-                if (!AudioManager.instance.FootStepsSource.isPlaying && !isRunning && Grounded /*&& _currentHorizontalSpeed < 10*/)
+                if (!AudioManager.instance.FootStepsSource.isPlaying && !isRunning && Grounded && Mathf.Abs(_currentHorizontalSpeed) > 0)
                 {
                     AudioManager.instance.PlayFootSteps("DogWalk");
                 }

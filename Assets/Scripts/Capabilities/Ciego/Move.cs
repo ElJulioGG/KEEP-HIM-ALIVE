@@ -101,6 +101,10 @@ public class Move : MonoBehaviour
     { //hace que el sprite mire hacia la derecha
         moverDerecha = true;
     }
+    public void MoverIzquierda()
+    { //hace que el sprite mire hacia la derecha
+        moverDerecha = false;
+    }
 
 
     //Para checkear la salida del nivel

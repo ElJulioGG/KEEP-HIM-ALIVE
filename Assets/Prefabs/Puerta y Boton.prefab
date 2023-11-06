@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   col2D: {fileID: 8432152059774378681}
-  estaCerrado: 1
+  estaCerrado: 0
   animatorBoton: {fileID: 0}
   animatorPuerta: {fileID: 0}
 --- !u!1 &8432152059548749664
