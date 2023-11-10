@@ -9,7 +9,8 @@ public class InteraccionEscaner : MonoBehaviour
     public bool isInRange;
    // public KeyCode interactKey;
     public UnityEvent interactAction;
-    public Animator animator;
+    public Animator animatorPuerta;
+    public Animator animatorCamara;
     public bool ActivatedCamera = false;
 
     void Start()
@@ -19,8 +20,8 @@ public class InteraccionEscaner : MonoBehaviour
 
     void Update()
     {
-       
-            animator.SetTrigger("NotPressed");
+
+        animatorPuerta.SetTrigger("NotPressed");
         
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -31,7 +32,8 @@ public class InteraccionEscaner : MonoBehaviour
             isInRange = true;
             Debug.Log("esta en rango");
             interactAction.Invoke();
-            animator.SetTrigger("Pressed");
+            animatorPuerta.SetTrigger("Pressed");
+            animatorCamara.SetBool("Activada", true);
             if (!ActivatedCamera) { 
                 m_BoxCollider.size = new Vector2(m_BoxCollider.size.x * 2, m_BoxCollider.size.y);
                 ActivatedCamera = true;
@@ -47,8 +49,8 @@ public class InteraccionEscaner : MonoBehaviour
             isInRange = false;
             Debug.Log("ya no esta en rango");
             interactAction.Invoke();
-            animator.SetTrigger("Pressed");
-
+            animatorPuerta.SetTrigger("Pressed");
+            animatorCamara.SetBool("Activada", false);
         }
     }
 }

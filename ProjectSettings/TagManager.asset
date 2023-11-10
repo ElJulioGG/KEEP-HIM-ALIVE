@@ -19,7 +19,7 @@ TagManager:
   - Player
   - layerMarker
   - Wall
-  - 
+  - Background
   - 
   - 
   - 
@@ -45,4 +45,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3872154239
     locked: 0

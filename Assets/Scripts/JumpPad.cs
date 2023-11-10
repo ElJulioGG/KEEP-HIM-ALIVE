@@ -8,6 +8,7 @@ public class JumpPad : MonoBehaviour
 {
     public Rigidbody2D rb;
     public Animator animator;
+    public Animator animatorJumpPad;
     public PlayerController controller;
     [SerializeField] float bounceCiego = 20f;
     [SerializeField] float bounceDog = 20f;
@@ -29,6 +30,7 @@ public class JumpPad : MonoBehaviour
 
                 animator.SetTrigger("jumpingThisFrame");
             }
+            animatorJumpPad.SetTrigger("Jump");
 
         }
         if (collision.gameObject.CompareTag("GroundCheck"))
@@ -40,7 +42,7 @@ public class JumpPad : MonoBehaviour
                     velocity.y = bounceCiego;
                     rb.velocity = velocity;
                 }
-            
+            animatorJumpPad.SetTrigger("Jump");
         }
 
     }
