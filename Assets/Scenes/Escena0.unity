@@ -2211,6 +2211,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 30d2bb8ed066aef4aaf749d12e971986, type: 3}
   - name: IntDoorClose
     clip: {fileID: 8300000, guid: 7816cc05bf1be59448e088ac3125a28b, type: 3}
+  - name: JumpPad
+    clip: {fileID: 8300000, guid: 7e0302b15b99e9b41a1c91e90e46e82f, type: 3}
   musicSource: {fileID: 1704029467}
   sfxSource: {fileID: 1875418630}
   FootStepsSource: {fileID: 1051782851}

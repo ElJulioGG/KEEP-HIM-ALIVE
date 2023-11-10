@@ -31,6 +31,7 @@ public class JumpPad : MonoBehaviour
                 animator.SetTrigger("jumpingThisFrame");
             }
             animatorJumpPad.SetTrigger("Jump");
+            AudioManager.instance.PlayDoor("JumpPad");
 
         }
         if (collision.gameObject.CompareTag("GroundCheck"))
@@ -43,6 +44,7 @@ public class JumpPad : MonoBehaviour
                     rb.velocity = velocity;
                 }
             animatorJumpPad.SetTrigger("Jump");
+            AudioManager.instance.PlayDoor("JumpPad");
         }
 
     }
