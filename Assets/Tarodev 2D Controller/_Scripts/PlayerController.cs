@@ -35,6 +35,7 @@ namespace TarodevController
        [SerializeField] public bool isOnEnd;
         bool derecha = true;
         public bool isRunning;
+        [SerializeField] public bool ColTecho = false;
 
         public bool isEnabled = false;
         public void SetCantInput(bool cntInput)
@@ -378,7 +379,7 @@ namespace TarodevController
         private void CalculateJump()
         {
             // Jump if: grounded or within coyote threshold || sufficient jump buffer
-            if (Input.JumpDown && CanUseCoyote || HasBufferedJump )
+            if ((Input.JumpDown && CanUseCoyote || HasBufferedJump)&& !ColTecho )
             {
                 AudioManager.instance.PlaySfx("DogJump");
                 _currentVerticalSpeed = _jumpHeight;

@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class Interacciones : MonoBehaviour
 {
     public bool isInRange;
-    public KeyCode interactKey;
+    //public KeyCode interactKey;
     public UnityEvent interactAction;
     public Animator animator;
 
@@ -14,12 +14,11 @@ public class Interacciones : MonoBehaviour
     {
 
     }
-
     void Update()
     {
         if (isInRange)
         {
-            if (Input.GetKeyDown(interactKey))
+            if (Input.GetButtonDown("Interact"))
             {
                 interactAction.Invoke();
                 animator.SetTrigger("Pressed");

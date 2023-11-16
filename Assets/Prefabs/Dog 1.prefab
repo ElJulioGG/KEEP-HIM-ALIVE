@@ -19457,6 +19457,81 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!1 &2423054015724767204
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6964935636912158538}
+  - component: {fileID: 2766591219132589172}
+  - component: {fileID: 7298143763286829491}
+  m_Layer: 0
+  m_Name: Techo Colider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6964935636912158538
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2423054015724767204}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6663966584737620717}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &2766591219132589172
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2423054015724767204}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.71}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 0.29}
+  m_EdgeRadius: 0
+--- !u!114 &7298143763286829491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2423054015724767204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 215998eb2595b3f46a963923e2c1a3ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformLayerMask:
+    serializedVersion: 2
+    m_Bits: 8
+  Controller: {fileID: 6663966584737620719}
 --- !u!1 &4765721867202128379
 GameObject:
   m_ObjectHideFlags: 0
@@ -19491,7 +19566,7 @@ Transform:
   - {fileID: 6663966585558274100}
   - {fileID: 377760151937686380}
   m_Father: {fileID: 6663966584737620717}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &404221677906384345
 MonoBehaviour:
@@ -19757,6 +19832,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 6964935636912158538}
   - {fileID: 6324673829398991407}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -19782,6 +19858,7 @@ MonoBehaviour:
   CantInput: 0
   isOnEnd: 0
   isRunning: 0
+  ColTecho: 0
   isEnabled: 0
   _characterBounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -19800,11 +19877,16 @@ MonoBehaviour:
   _fallClamp: -40
   _minFallSpeed: 80
   _maxFallSpeed: 120
+  _fallSpeed: 0
   _jumpHeight: 26
   _jumpApexThreshold: 10
   _coyoteTimeThreshold: 0.05
   _jumpBuffer: 0.1
   _jumpEndEarlyGravityModifier: 3
+  _coyoteUsable: 0
+  _endedJumpEarly: 1
+  _apexPoint: 0
+  _lastJumpPressed: 0
   _freeColliderIterations: 10
 --- !u!50 &377760150754065679
 Rigidbody2D:

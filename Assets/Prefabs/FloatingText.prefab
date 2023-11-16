@@ -91,7 +91,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 459979182167100101}
-  m_Text: Bark
+  m_Text: Woof!
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -104,7 +104,7 @@ TextMesh:
   m_Font: {fileID: 12800000, guid: 91ec307ab172d5448aaefb5989b54915, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4283672537
+    rgba: 4294967295
 --- !u!114 &6690779290141909165
 MonoBehaviour:
   m_ObjectHideFlags: 0
