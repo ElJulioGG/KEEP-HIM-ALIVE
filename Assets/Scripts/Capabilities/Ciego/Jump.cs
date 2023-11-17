@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Jump : MonoBehaviour
 {
+    public ParticleSystem Dust;
     public GameObject FloatingTextPrefab;
     public GameObject Dog;
     [SerializeField] private InputController input = null;
@@ -69,7 +70,7 @@ public class Jump : MonoBehaviour
     {
         if (onGround || jumpPhase < maxAirJumps)
         {
-            
+            CreateDust();
             int randomIndex = Random.Range(0, 5);
             jumpPhase += 1;
             float jumpSpeed = Mathf.Sqrt(-2f * Physics2D.gravity.y * jumpHeight);
@@ -112,6 +113,11 @@ public class Jump : MonoBehaviour
     void showFloatingText()
     {
         Instantiate(FloatingTextPrefab, Dog.transform.position, Quaternion.identity); //ampliar con el dog.transform si es necesario
+    }
+
+    void CreateDust()
+    {
+        Dust.Play();
     }
 
 }

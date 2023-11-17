@@ -13,6 +13,7 @@ namespace TarodevController
    
     public class PlayerController : MonoBehaviour, IPlayerController
     {
+        public ParticleSystem Dust;
         public UnityEvent evento;
         public Animator animator;
         // Public for external hooks
@@ -77,10 +78,12 @@ namespace TarodevController
                 if (_currentHorizontalSpeed > 0 && !derecha)
                 {
                     flip();
+                    
                 }
                 if (_currentHorizontalSpeed < 0 && derecha)
                 {
                     flip();
+                    
                 }
                 GatherInput();
 
@@ -99,6 +102,10 @@ namespace TarodevController
             }
         }
 
+        void CreateDust()
+        {
+            Dust.Play();
+        }
         void MakeEnabled()
         {
             evento.Invoke();
@@ -112,6 +119,10 @@ namespace TarodevController
             transform.localScale = characterScale;
 
             derecha = !derecha;
+            if (Grounded) {
+                CreateDust();
+            }
+          
             Debug.Log("flip");
         }
 
@@ -382,6 +393,7 @@ namespace TarodevController
             if ((Input.JumpDown && CanUseCoyote || HasBufferedJump)&& !ColTecho )
             {
                 AudioManager.instance.PlaySfx("DogJump");
+                CreateDust();
                 _currentVerticalSpeed = _jumpHeight;
                 _endedJumpEarly = false;
                 _coyoteUsable = false;
