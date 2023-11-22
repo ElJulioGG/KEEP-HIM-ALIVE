@@ -5,7 +5,7 @@ using UnityEngine;
 public class PuertaController : MonoBehaviour
 {
 
-    [SerializeField] BoxCollider2D col2D;
+    [SerializeField] GameObject col2D;
     public bool estaCerrado;
     public Animator animatorBoton;
     public Animator animatorPuerta;
@@ -17,7 +17,7 @@ public class PuertaController : MonoBehaviour
             estaCerrado = false;
             animatorBoton.SetBool("Cerrado", estaCerrado);
             animatorPuerta.SetBool("Cerrado", estaCerrado);
-            col2D.enabled = false;
+            col2D.SetActive(false);
             Debug.Log("Puerta abierta");
            // AudioManager.instance.PlayDoor("IntDoorOpen");
         }
@@ -26,7 +26,7 @@ public class PuertaController : MonoBehaviour
             estaCerrado = true;
             animatorBoton.SetBool("Cerrado", estaCerrado);
             animatorPuerta.SetBool("Cerrado", estaCerrado);
-            col2D.enabled = true;
+            col2D.SetActive(true);
             Debug.Log("Puerta Cerrada");
            // AudioManager.instance.PlayDoor("IntDoorClose");
         }
@@ -38,7 +38,7 @@ public class PuertaController : MonoBehaviour
             estaCerrado = false;
             animatorBoton.SetBool("Cerrado", estaCerrado);
             animatorPuerta.SetBool("Cerrado", estaCerrado);
-            col2D.enabled = false;
+            col2D.SetActive(false);
             Debug.Log("Puerta abierta");
             AudioManager.instance.PlayDoor("IntDoorOpen");
         }
@@ -47,7 +47,7 @@ public class PuertaController : MonoBehaviour
             estaCerrado = true;
             animatorBoton.SetBool("Cerrado", estaCerrado);
             animatorPuerta.SetBool("Cerrado", estaCerrado);
-            col2D.enabled = true;
+            col2D.SetActive(true);
             Debug.Log("Puerta Cerrada");
             AudioManager.instance.PlayDoor("IntDoorClose");
         }

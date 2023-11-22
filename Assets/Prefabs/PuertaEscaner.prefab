@@ -135,7 +135,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  animator: {fileID: 7398405705251644130}
+  animatorPuerta: {fileID: 0}
+  animatorCamara: {fileID: 0}
   ActivatedCamera: 0
 --- !u!61 &8048259759409222403
 BoxCollider2D:
@@ -317,7 +318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad8abb478274ba94ba14d965010346b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  col2D: {fileID: 1416785969176870792}
+  col2D: {fileID: 1416785969176870795}
   estaCerrado: 0
   animatorBoton: {fileID: 7398405704581067443}
   animatorPuerta: {fileID: 7398405705251644130}
