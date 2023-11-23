@@ -26,7 +26,7 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(1);
     }
     public void EscenaMenu() {
-        SceneManager.LoadScene("Menu");
+        //SceneManager.LoadScene("Menu");
     }
     public void EscenaSeleccionarNivel() {
         SceneManager.LoadScene("SeleccionarNivel");
