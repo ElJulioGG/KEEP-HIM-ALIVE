@@ -2,23 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
+    public Animator animatorMenu;
+    public Animator animatorSelecNivel;
+
+    public GameObject CanvasSelecNivel;
+    public GameObject CanvasMenu;
+
     private bool musicStoped=false;
     // Start is called before the first frame update
     void Start()
     {
-        
+        //if (!AudioManager.instance.musicSource.isPlaying && !musicStoped)
+        //{
+        //    AudioManager.instance.PlayMusic("MenuMusic");
+        //}
+        AudioManager.instance.PlayMusic("MenuMusic");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!AudioManager.instance.musicSource.isPlaying && !musicStoped)
-        {
-            AudioManager.instance.PlayMusic("MenuMusic");
-        }
+        
     }
     public void EscenaJuego() {
         musicStoped = true;
@@ -26,13 +34,28 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(1);
     }
     public void EscenaMenu() {
-        //SceneManager.LoadScene("Menu");
+
+        CanvasMenu.SetActive(true);
+
+        animatorMenu.SetTrigger("FadeIn");
+        animatorSelecNivel.SetTrigger("FadeOut");
+
     }
     public void EscenaSeleccionarNivel() {
-        SceneManager.LoadScene("SeleccionarNivel");
+        CanvasSelecNivel.SetActive(true);
+
+        animatorMenu.SetTrigger("FadeOut");
+        animatorSelecNivel.SetTrigger("FadeIn");
+
     }
     public void EscenaCred()
     {
-        SceneManager.LoadScene("Creditos");
+        //SceneManager.LoadScene("Creditos");
     }
+
+    void transitionSelecNivel()
+    {
+
+    }
+   
 }
