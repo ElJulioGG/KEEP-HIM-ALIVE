@@ -5,7 +5,6 @@ using UnityEngine.Events;
 
 public class InteraccionSalida : MonoBehaviour
 {
-    
     public bool isInRange;
     //public UnityEvent interactAction;
     public Animator animator;
