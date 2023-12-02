@@ -2066,6 +2066,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 1269095233}
+  nivelActual: 1
 --- !u!1 &248865316
 GameObject:
   m_ObjectHideFlags: 0
@@ -2949,6 +2950,18 @@ MonoBehaviour:
       - m_Target: {fileID: 217780187}
         m_TargetAssemblyTypeName: Timer, Assembly-CSharp
         m_MethodName: Pause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 217780187}
+        m_TargetAssemblyTypeName: Timer, Assembly-CSharp
+        m_MethodName: SaveTime
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -20512,11 +20525,13 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 7816cc05bf1be59448e088ac3125a28b, type: 3}
   - name: JumpPad
     clip: {fileID: 8300000, guid: 7e0302b15b99e9b41a1c91e90e46e82f, type: 3}
+  UISounds: []
   musicSource: {fileID: 816081455}
   sfxSource: {fileID: 1750554458}
   FootStepsSource: {fileID: 830477415}
   BarkSource: {fileID: 1319364690}
   DoorSource: {fileID: 1500523367}
+  UISource: {fileID: 0}
 --- !u!4 &1590750150
 Transform:
   m_ObjectHideFlags: 0

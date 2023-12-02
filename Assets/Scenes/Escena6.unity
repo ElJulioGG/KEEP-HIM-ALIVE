@@ -17805,11 +17805,13 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 7816cc05bf1be59448e088ac3125a28b, type: 3}
   - name: JumpPad
     clip: {fileID: 8300000, guid: 7e0302b15b99e9b41a1c91e90e46e82f, type: 3}
+  UISounds: []
   musicSource: {fileID: 1358170052}
   sfxSource: {fileID: 838454638}
   FootStepsSource: {fileID: 779201104}
   BarkSource: {fileID: 968213293}
   DoorSource: {fileID: 137177138}
+  UISource: {fileID: 0}
 --- !u!4 &1719614747
 Transform:
   m_ObjectHideFlags: 0
@@ -18338,6 +18340,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1912934209}
         m_TargetAssemblyTypeName: Timer, Assembly-CSharp
         m_MethodName: Pause
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1912934209}
+        m_TargetAssemblyTypeName: Timer, Assembly-CSharp
+        m_MethodName: SaveTime
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -19350,6 +19364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 324677216}
+  nivelActual: 5
 --- !u!224 &1912934210
 RectTransform:
   m_ObjectHideFlags: 0

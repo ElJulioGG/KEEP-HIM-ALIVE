@@ -31,7 +31,7 @@ public class TutorialControllerCheck : MonoBehaviour
         else
         {
             // No controllers are connected
-            Debug.Log("No controller connected");
+            //Debug.Log("No controller connected");
             Tile1.SetActive(true);
             Tile2.SetActive(false);
         }

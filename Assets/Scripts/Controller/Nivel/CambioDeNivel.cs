@@ -21,6 +21,7 @@ public class CambioDeNivel : MonoBehaviour
     public bool moveCamera = false;
 
     bool fadeOut = false;
+    Timer timer;
 
     // Start is called before the first frame update
     private void Start()
