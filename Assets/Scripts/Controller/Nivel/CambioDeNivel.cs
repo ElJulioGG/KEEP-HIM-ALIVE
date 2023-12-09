@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 using TarodevController;
 using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 
 public class CambioDeNivel : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class CambioDeNivel : MonoBehaviour
     public bool moveCamera = false;
 
     bool fadeOut = false;
-    Timer timer;
+    public Timer timer;
 
     // Start is called before the first frame update
     private void Start()
@@ -109,14 +110,20 @@ public class CambioDeNivel : MonoBehaviour
         {
             if (!fadeOut) {
                 Fade.Invoke();
+                timer.Pause();
                 fadeOut = true;
                 moveCamera = true;
             }
-           
+            Invoke("saveTimeCambioNivel", 2f);
             Invoke("cambiarDeEscena", 3f);
             playerController.CantInput = true;
             
         }
+    }
+
+    void saveTimeCambioNivel()
+    {
+        timer.SaveTime();
     }
     //SceneManager.LoadScene("Escena1");
     //playerController.CantInput = true;

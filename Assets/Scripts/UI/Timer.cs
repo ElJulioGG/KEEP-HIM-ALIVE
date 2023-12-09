@@ -12,10 +12,12 @@ public class Timer : MonoBehaviour
     private bool alive = false;
     // Start is called before the first frame update
     [SerializeField] private int nivelActual; 
+    public Animator animatorTimer;
 
     void Start()
     {
         Invoke("Resume",2f);
+        animatorTimer.SetTrigger("TimerIn");
     }
     void Setup()
     {
@@ -42,6 +44,7 @@ public class Timer : MonoBehaviour
 
     public void SaveTime()
     {
+        animatorTimer.SetTrigger("TimerOut");
         switch (nivelActual)
         {
             case 0:
@@ -103,6 +106,7 @@ public class Timer : MonoBehaviour
         public void Resume()
     {
         alive = true;
+
     }
     void SetDown()
     {

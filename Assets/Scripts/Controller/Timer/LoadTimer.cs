@@ -35,23 +35,13 @@ public class LoadTimer : MonoBehaviour
                 evento.Invoke();
                 cameraManager.switchCamera(cameraManager.cameraJuego);
                 cameraSwitched = true;
-                //if (SceneManager.GetActiveScene().buildIndex > 1)
-                //{
+              
                     if (!AudioManager.instance.musicSource.isPlaying)
                     {
                         AudioManager.instance.PlayMusic("LevelMusic");
                         
                     }
-                //}
-                //if (SceneManager.GetActiveScene().buildIndex == 1)
-                //{
-                //    if (!AudioManager.instance.musicSource.isPlaying)
-                //    {
-                //        AudioManager.instance.PlayMusic("Tutorial");
-
-                //    }
-                //}
-
+                
             }
             if (!charactersInstantiaded)
             {
