@@ -9,7 +9,7 @@ public class MenuPausa : MonoBehaviour
 {
     [SerializeField] private GameObject botonPausa;
     [SerializeField] private GameObject menuPausa;
-    public GameObject PausaText;
+    public Animator PausaTextAnimator;
     private PlayerController PlayerController;
     private bool isPaused = false;
     private bool isEnabled = false;
@@ -22,38 +22,41 @@ public class MenuPausa : MonoBehaviour
     }
     public void Update()
     {
+        if (GameManager.instance.GameOver)
+        {
+            isEnabled = false;
+        }
         if (isEnabled)
         {
             if ((Input.GetButtonDown("Pause") && !isPaused))
             {
-                PlayerController.SetCantInput(true);
-                Time.timeScale = 0.000001f;
-                botonPausa.SetActive(false);
-                menuPausa.SetActive(true);
-                isPaused = true;
-
+                Pausa();
             }
             else if ((Input.GetButtonDown("Pause") && isPaused))
             {
-                PlayerController.SetCantInput(false);
-                Time.timeScale = 1f;
-                botonPausa.SetActive(true);
-                menuPausa.SetActive(false);
-                isPaused = false;
-
+                Reanudar();
             }
         }
+        
     }
     public void Pausa() {
+        PlayerController.SetCantInput(true);
         Time.timeScale = 0.000001f;
         botonPausa.SetActive(false);
         menuPausa.SetActive(true);
-        
+        isPaused = true;
+        PausaTextAnimator.SetTrigger("Hide");
+        AudioManager.instance.FootStepsSource.volume = 0f; //hasta las huevas fix
+
     }
     public void Reanudar() {
+        PlayerController.SetCantInput(false);
         Time.timeScale = 1f;
         botonPausa.SetActive(true);
         menuPausa.SetActive(false);
+        isPaused = false;
+        PausaTextAnimator.SetTrigger("Show");
+        AudioManager.instance.FootStepsSource.volume = 0.8f;//hasta las huevas fix2
     }
     public void VolverMenu() {
         SceneManager.LoadScene("Menu");
@@ -61,6 +64,12 @@ public class MenuPausa : MonoBehaviour
     public void Setup()
     {
         isEnabled = true;
-        PausaText.SetActive(true);
+        PausaTextAnimator.SetTrigger("FadeIn");
+        //print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+    }
+    public void Setdown()
+    {
+        PausaTextAnimator.SetTrigger("FadeOut");
+        isEnabled = false;
     }
 }

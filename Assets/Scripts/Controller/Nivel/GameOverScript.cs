@@ -24,6 +24,7 @@ public class GameOverScript : MonoBehaviour
     }
     public void Setup(/*int score*/)
     {
+        GameManager.instance.GameOver = true;
         gameObject.SetActive(true);
         fadein.Invoke();
         timer.Pause();

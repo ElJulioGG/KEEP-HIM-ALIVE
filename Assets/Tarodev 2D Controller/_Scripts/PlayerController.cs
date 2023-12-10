@@ -47,6 +47,7 @@ namespace TarodevController
         private void Start()
         {
             Invoke("MakeEnabled", 2f);
+            GameManager.instance.GameOver = false;
         }
 
         private void Update()

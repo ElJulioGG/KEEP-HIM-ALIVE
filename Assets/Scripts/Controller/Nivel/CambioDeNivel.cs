@@ -23,6 +23,7 @@ public class CambioDeNivel : MonoBehaviour
 
     bool fadeOut = false;
     public Timer timer;
+    public MenuPausa pausaCanvas;
 
     // Start is called before the first frame update
     private void Start()
@@ -34,7 +35,7 @@ public class CambioDeNivel : MonoBehaviour
     {
         if ((playerController.isOnEnd == true) && (move.isOnEnd == true))
         {
-            print("daw"); 
+            print("cambio de camara en 2f"); 
             Invoke("CambioDeCamara", 2f);
             Action.Invoke();
         }
@@ -108,6 +109,7 @@ public class CambioDeNivel : MonoBehaviour
     {
         if ((playerController.isOnEnd == true) && (move.isOnEnd == true))
         {
+            pausaCanvas.Setdown();
             if (!fadeOut) {
                 Fade.Invoke();
                 timer.Pause();
@@ -115,7 +117,7 @@ public class CambioDeNivel : MonoBehaviour
                 moveCamera = true;
             }
             Invoke("saveTimeCambioNivel", 2f);
-            Invoke("cambiarDeEscena", 3f);
+            Invoke("cambiarDeEscena", 4f);
             playerController.CantInput = true;
             
         }
@@ -124,6 +126,7 @@ public class CambioDeNivel : MonoBehaviour
     void saveTimeCambioNivel()
     {
         timer.SaveTime();
+        print("lolmao");
     }
     //SceneManager.LoadScene("Escena1");
     //playerController.CantInput = true;

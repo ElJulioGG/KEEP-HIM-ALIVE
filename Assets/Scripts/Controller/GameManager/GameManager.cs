@@ -10,25 +10,26 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public int levelsCompleted = 0;
 
+    public bool GameOver = false;
 
-   public bool Nv1Complete = false;
-   public bool Nv2Complete = false;
-   public bool Nv3Complete = false;
-   public bool Nv4Complete = false;
-   public bool Nv5Complete = false;
-   public bool Nv6Complete = false;
-   public bool Nv7Complete = false;
-   public bool Nv8Complete = false;
+    public bool Nv1Complete = false;
+    public bool Nv2Complete = false;
+    public bool Nv3Complete = false;
+    public bool Nv4Complete = false;
+    public bool Nv5Complete = false;
+    public bool Nv6Complete = false;
+    public bool Nv7Complete = false;
+    public bool Nv8Complete = false;
 
     public float TutorialTime = 0f;
     public float Nv1Time = 0f;
-     public float Nv2Time = 0f;
-   public float Nv3Time = 0f;
-   public float Nv4Time = 0f;
-   public float Nv5Time = 0f;
+    public float Nv2Time = 0f;
+    public float Nv3Time = 0f;
+    public float Nv4Time = 0f;
+    public float Nv5Time = 0f;
     public float Nv6Time = 0f;
     public float Nv7Time = 0f;
-     public float Nv8Time = 0f;
+    public float Nv8Time = 0f;
 
 
     private void Awake()
