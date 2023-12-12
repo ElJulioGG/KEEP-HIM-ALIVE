@@ -6970,6 +6970,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelsCompleted: 0
+  GameOver: 0
   Nv1Complete: 0
   Nv2Complete: 0
   Nv3Complete: 0

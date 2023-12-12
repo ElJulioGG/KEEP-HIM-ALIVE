@@ -59,6 +59,7 @@ public class MenuPausa : MonoBehaviour
         AudioManager.instance.FootStepsSource.volume = 0.8f;//hasta las huevas fix2
     }
     public void VolverMenu() {
+        Time.timeScale = 1f;
         SceneManager.LoadScene("Menu");
     }
     public void Setup()
