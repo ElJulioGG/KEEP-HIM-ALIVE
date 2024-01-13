@@ -14,7 +14,7 @@ public class SelecNivelManager : MonoBehaviour
         //{
         //    AudioManager.instance.PlayMusic("MenuMusic");
         //}
-        AudioManager.instance.PlayMusic("MenuMusic");
+        //AudioManager.instance.PlayMusic("MenuMusic");
     }
 
     // Update is called once per frame

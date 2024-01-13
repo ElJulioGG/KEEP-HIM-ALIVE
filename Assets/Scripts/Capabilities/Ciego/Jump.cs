@@ -68,7 +68,7 @@ public class Jump : MonoBehaviour
     }
     private void JumpAction()
     {
-        if (onGround || jumpPhase < maxAirJumps)
+        if ((onGround || jumpPhase < maxAirJumps) && Dog.activeInHierarchy)
         {
             CreateDust();
             int randomIndex = Random.Range(0, 5);

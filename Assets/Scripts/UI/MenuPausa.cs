@@ -60,6 +60,7 @@ public class MenuPausa : MonoBehaviour
     }
     public void VolverMenu() {
         Time.timeScale = 1f;
+        AudioManager.instance.musicSource.Stop();
         SceneManager.LoadScene("Menu");
     }
     public void Setup()

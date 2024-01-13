@@ -36,9 +36,12 @@ public class KillPlayer : MonoBehaviour
         {
             Instantiate(BloodPrefab, other.CompareTag("Jugador") ? Dog.transform.position : Character.transform.position, Quaternion.identity);
             playerController.CantInput = true;
-            
+
             if (other.CompareTag("Jugador"))
+            {
                 Dog.SetActive(false);
+                playerController.CantInput = true;
+            }
             else
                 Character.SetActive(false);
             AudioManager.instance.PlaySfx("Death");

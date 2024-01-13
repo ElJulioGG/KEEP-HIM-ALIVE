@@ -13,9 +13,11 @@ public class GameOverScript : MonoBehaviour
 
     public UnityEvent fadein;
     private Timer timer;
- 
+    private PlayerController PlayerController;
+
     public void Start()
     {
+        PlayerController = GameObject.Find("Dog")?.GetComponent<PlayerController>();
         //timer = GameObject.Find("Timer").GetComponent<Timer>();
     }
     private void Awake()
@@ -28,6 +30,7 @@ public class GameOverScript : MonoBehaviour
         gameObject.SetActive(true);
         fadein.Invoke();
         timer.Pause();
+       // PlayerController.SetCantInput(true);
         // pointsText.text = score.ToString() + " Points ";
         //playerController.CantInput = true;
     }

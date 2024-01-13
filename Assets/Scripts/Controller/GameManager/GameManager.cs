@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public int levelsCompleted = 0;
 
+    public bool introHasPlayed = false;
+
     public bool GameOver = false;
 
     public bool Nv1Complete = false;
