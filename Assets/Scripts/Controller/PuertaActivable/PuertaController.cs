@@ -7,6 +7,7 @@ public class PuertaController : MonoBehaviour
 
     [SerializeField] GameObject col2D;
     public bool estaCerrado;
+    public bool mute = false;
     public Animator animatorBoton;
     public Animator animatorPuerta;
 
@@ -40,7 +41,10 @@ public class PuertaController : MonoBehaviour
             animatorPuerta.SetBool("Cerrado", estaCerrado);
             col2D.SetActive(false);
             Debug.Log("Puerta abierta");
-            AudioManager.instance.PlayDoor("IntDoorOpen");
+            if (!mute)
+            {
+                AudioManager.instance.PlayDoor("IntDoorOpen");
+            }
         }
         else
         {
@@ -49,7 +53,10 @@ public class PuertaController : MonoBehaviour
             animatorPuerta.SetBool("Cerrado", estaCerrado);
             col2D.SetActive(true);
             Debug.Log("Puerta Cerrada");
-            AudioManager.instance.PlayDoor("IntDoorClose");
+            if (!mute)
+            {
+                AudioManager.instance.PlayDoor("IntDoorClose");
+            }
         }
     }
     

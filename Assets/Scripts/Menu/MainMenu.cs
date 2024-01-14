@@ -23,11 +23,14 @@ public class MainMenu : MonoBehaviour
 
     IEnumerator IniciarMenu;
     IEnumerator IntroducirCorrutina;
+    IEnumerator EndingCorrutina;
 
     private bool musicStoped = false;
-    private bool enCinematica = true;
+    private bool enIntro = true;
+    private bool enEnding = true;
     private bool mostrarMensaje = false;
     public VideoPlayer IntroPlayer;
+    public VideoPlayer EndingPlayer;
 
     public GameObject CanvasPantalla;
 
@@ -37,12 +40,21 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        DesabilitarBotonesMenu();
         IniciarMenu = InicioMenu();
 
         IntroducirCorrutina = IntroCorrutina();
 
+        EndingCorrutina = EndCorrutina();
+
+        
+          //  StartCoroutine(EndingCorrutina);
+        
+        
+
         StartCoroutine(IntroducirCorrutina);
         
+
         //StartCoroutine(IniciarMenu);
 
 
@@ -50,21 +62,38 @@ public class MainMenu : MonoBehaviour
         //{
         //    AudioManager.instance.PlayMusic("MenuMusic");
         //}
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
         skipCinematica();
-        if (!enCinematica || GameManager.instance.introHasPlayed)
+        
+        if ((GameManager.instance.introHasPlayed) && !GameManager.instance.reachEnding)
         {
             CanvasPantalla.SetActive(false);
+            StopCoroutine(EndingCorrutina);
             StopCoroutine(IntroducirCorrutina);
             IntroPlayer.Stop();
             StartCoroutine(IniciarMenu);
-            enCinematica = true;
+
         }
+        //if ((GameManager.instance.introHasPlayed) && !GameManager.instance.reachEnding)
+        //{
+        //    CanvasPantalla.SetActive(false);
+        //    StopCoroutine(EndingCorrutina);
+        //    IntroPlayer.Stop();
+        //    StartCoroutine(IniciarMenu);
+
+        //}
+        //if ((enEnding && GameManager.instance.introHasPlayed))
+        //{
+        //    CanvasPantalla.SetActive(false);
+        //    StopCoroutine(IntroducirCorrutina);
+        //    IntroPlayer.Stop();
+        //    StartCoroutine(IniciarMenu);
+        //}
     }
     public void EscenaJuego() {
         musicStoped = true;
@@ -115,7 +144,7 @@ public class MainMenu : MonoBehaviour
     void skipCinematica()
     {
        
-        if (enCinematica && Input.anyKey && !mostrarMensaje)
+        if ((enIntro||enEnding) && Input.anyKey && !mostrarMensaje)
         {
              SkipText.SetBool("Fade",true);
             mostrarMensaje = true;
@@ -134,29 +163,58 @@ public class MainMenu : MonoBehaviour
 
         if (skipHold >= skipTime)
         {
-            enCinematica = false;
+            enIntro = false;
+            enEnding = false;
             GameManager.instance.introHasPlayed = true;
+            GameManager.instance.reachEnding = false;
+            StartCoroutine(IniciarMenu);
         }
     }
 
     void cinematica()
     {
-        enCinematica = true;
+        CanvasPantalla.SetActive(true);
+        enIntro = true;
         IntroPlayer.Play();
+    }
+    void cinematica2()
+    {
+        CanvasPantalla.SetActive(true);
+        enEnding = true;
+        EndingPlayer.Play();
     }
 
     IEnumerator IntroCorrutina()
     {
-             yield return new WaitForSeconds(2f);
+        enIntro = true;
+        yield return new WaitForSeconds(2f);
 
              AudioManager.instance.musicSource.Stop();
              cinematica();
 
              yield return new WaitForSeconds(38f);
 
-             enCinematica = false;
+             enIntro = false;
              CanvasPantalla.SetActive(false); 
              GameManager.instance.introHasPlayed = true;
+        
+        yield return null;
+    }
+
+    IEnumerator EndCorrutina()
+    {
+        enEnding = true;
+        yield return new WaitForSeconds(2f);
+
+        AudioManager.instance.musicSource.Stop();
+        cinematica2();
+
+        yield return new WaitForSeconds(38f);
+
+        enEnding = false;
+        CanvasPantalla.SetActive(false);
+        GameManager.instance.reachEnding = false;
+        
         yield return null;
     }
     IEnumerator InicioMenu() {

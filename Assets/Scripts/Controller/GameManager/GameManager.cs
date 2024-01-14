@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public int levelsCompleted = 0;
 
     public bool introHasPlayed = false;
+    public bool reachEnding = false;
 
     public bool GameOver = false;
 
