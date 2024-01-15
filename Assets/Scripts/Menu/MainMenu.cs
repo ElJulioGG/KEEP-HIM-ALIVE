@@ -48,10 +48,8 @@ public class MainMenu : MonoBehaviour
         EndingCorrutina = EndCorrutina();
 
         
-          //  StartCoroutine(EndingCorrutina);
-        
-        
-
+        StartCoroutine(EndingCorrutina);
+      
         StartCoroutine(IntroducirCorrutina);
         
 
@@ -68,17 +66,32 @@ public class MainMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /// introplayed,F; reachend,F == intro 2
+        /// introplayed,T; reachend,F == nada 1
+        /// introplayed,T; reachend,T == end 
+        /// introplayed,F; reachend,T = end
         skipCinematica();
-        
-        if ((GameManager.instance.introHasPlayed) && !GameManager.instance.reachEnding)
+        if (GameManager.instance.introHasPlayed && !GameManager.instance.reachEnding)
         {
             CanvasPantalla.SetActive(false);
             StopCoroutine(EndingCorrutina);
             StopCoroutine(IntroducirCorrutina);
             IntroPlayer.Stop();
             StartCoroutine(IniciarMenu);
-
         }
+        if (!GameManager.instance.introHasPlayed && !GameManager.instance.reachEnding)
+        {
+            StopCoroutine(EndingCorrutina);
+        }
+        if (!GameManager.instance.introHasPlayed && !GameManager.instance.reachEnding)
+        {
+            StopCoroutine(EndingCorrutina);
+        }
+        if ((GameManager.instance.introHasPlayed && GameManager.instance.reachEnding)||(!GameManager.instance.introHasPlayed && GameManager.instance.reachEnding))
+        {
+            StopCoroutine(IntroducirCorrutina);
+        }
+
         //if ((GameManager.instance.introHasPlayed) && !GameManager.instance.reachEnding)
         //{
         //    CanvasPantalla.SetActive(false);
@@ -167,6 +180,9 @@ public class MainMenu : MonoBehaviour
             enEnding = false;
             GameManager.instance.introHasPlayed = true;
             GameManager.instance.reachEnding = false;
+            IntroPlayer.Stop();
+            EndingPlayer.Stop();
+            CanvasPantalla.SetActive(false);
             StartCoroutine(IniciarMenu);
         }
     }
@@ -209,7 +225,7 @@ public class MainMenu : MonoBehaviour
         AudioManager.instance.musicSource.Stop();
         cinematica2();
 
-        yield return new WaitForSeconds(38f);
+        yield return new WaitForSeconds(40f);
 
         enEnding = false;
         CanvasPantalla.SetActive(false);
