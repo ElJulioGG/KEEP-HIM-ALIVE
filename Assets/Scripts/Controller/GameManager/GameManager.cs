@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     public bool Nv6Complete = false;
     public bool Nv7Complete = false;
     public bool Nv8Complete = false;
+    public bool Nv9Complete = false;
 
     public float TutorialTime = 0f;
     public float Nv1Time = 0f;

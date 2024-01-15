@@ -100,8 +100,21 @@ public class CambioDeNivel : MonoBehaviour
             GameManager.instance.levelsCompleted += 1;
             GameManager.instance.Nv8Complete = true;
         }
-
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
+        if (SceneManager.GetActiveScene().buildIndex == 9 && !GameManager.instance.Nv8Complete)
+        {
+            GameManager.instance.levelsCompleted += 1;
+            GameManager.instance.Nv9Complete = true;
+            GameManager.instance.reachEnding = true;
+        }
+        if (!GameManager.instance.reachEnding)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        else
+        {
+            AudioManager.instance.musicSource.Stop();
+            SceneManager.LoadScene(0);
+        }
     }
     
 
@@ -127,6 +140,10 @@ public class CambioDeNivel : MonoBehaviour
     {
         timer.SaveTime();
         print("lolmao");
+    }
+    public void reachingEnd()
+    {
+        GameManager.instance.reachEnding = true;
     }
     //SceneManager.LoadScene("Escena1");
     //playerController.CantInput = true;
