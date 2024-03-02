@@ -1,0 +1,1864 @@
+fileFormatVersion: 2
+guid: 83347f8617fb43c47bd164d071dd6bf5
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: KHA_FB_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 144
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8ed2530acc37a143a8fa148cee5f50f
+      internalID: 1401278008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_1
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 768
+        width: 144
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0097a0bd102696b499d5455601eca0f1
+      internalID: 275620372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_2
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 968
+        width: 168
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e26c1124d1da3c64892e62fd946c9466
+      internalID: -609114846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_3
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 1005
+        width: 31
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2d7cf52dfb769d418d4365716a7107b
+      internalID: -711625653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_4
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 1014
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ceef52fb635acf947975032b15d31bb0
+      internalID: 2071172864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_5
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 1002
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbddb0dad3a062f4bab1f858464f525e
+      internalID: 1880281239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_6
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 984
+        width: 40
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 487411b9578624b488545eea0f0f7aae
+      internalID: 854560881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_7
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 988
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6791090f48dc8aa44bb445f3a580c30e
+      internalID: -741689452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_8
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 968
+        width: 40
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 796222692c0fd804fa99114ea8a6235b
+      internalID: -1731911368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_9
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 972
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f07ffbf9eac003e41804470c7e973507
+      internalID: 1346319503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_10
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 944
+        width: 32
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9262dea15a940d43b8439434ac7b436
+      internalID: 1364779552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_11
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 940
+        width: 58
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7ac01571a8256d4b9b804c76edff98e
+      internalID: -240396902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_12
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 944
+        width: 49
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cecd69bec6bf47343ae60c9d6bed7394
+      internalID: 170040673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_13
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 944
+        width: 42
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d604e2cc9ef0504e8e0b741288e46bf
+      internalID: -514348999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_14
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 946
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef2110b97b9350c4c92765ae72b13e58
+      internalID: -166432342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_15
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 917
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 330f300e08426a14c94e74cb9d0364c8
+      internalID: 1150718994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_16
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 935
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8db707e74e81ff346b83b3972631bdb5
+      internalID: -1759701648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_17
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 926
+        width: 67
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c261a8d3720bf7945979a721b651ad5a
+      internalID: 1630925737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_23
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 907
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cc12ad9196f1194990aa0e4fb818ccf
+      internalID: 877294730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_24
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 891
+        width: 21
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c18aad62b58a004f8c4116a8dab2d68
+      internalID: -640106656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_25
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 884
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06a6960a3086e8f42a3376e04f84c8af
+      internalID: -230778859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_26
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 891
+        width: 21
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad3a2bd5255b8a34390f1dee4e02927d
+      internalID: 906808019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_27
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 877
+        width: 51
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51b8b280f80c1594989fb64090bedcfd
+      internalID: -1029868470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_28
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 877
+        width: 51
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84f06e7b8d1edcd4a97f254cf61166c8
+      internalID: 1887775053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_29
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 868
+        width: 40
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ed9f1d14c5b5aa4e89c77fb9b9bb6f4
+      internalID: -1262466580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_30
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 868
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e227875bc09c3fa459ec3fac84bf47eb
+      internalID: -789215085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_31
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 846
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d372df552b4f051469d9868209e47ec0
+      internalID: -777209611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_32
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 846
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7262d7bde0eabff4abaf14e0c9d4743e
+      internalID: 77954131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_33
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 846
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d363eff68d30cd4ab140f01c6d8183d
+      internalID: 530723319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_34
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 846
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 886fb27ecbac6d64a9cb311fb8be5301
+      internalID: -1573401651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_35
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 822
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49b567b5dcb9a4245add83575f2afaaf
+      internalID: -1304050011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_36
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 822
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b8051aff0a48594ab18280bc07db53b
+      internalID: -1111323204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_37
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 822
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06405771f0a247d44a99b783363ef046
+      internalID: -1451124552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_38
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 822
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d78a603b0ee1844e8dff1ab7da42751
+      internalID: -79730032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_39
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 802
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5f45537022945c4b9e1bee35a607188
+      internalID: 482759417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_40
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 808
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 560f7974d9d6e4845a62bc9dac6b1045
+      internalID: -1687096097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_45
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 784
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9e4d57f206a7cb408da84d1e220b90f
+      internalID: -2024185955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_47
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 751
+        width: 98
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 412e1c39197635c4fbdfebe41c671b7b
+      internalID: -695858409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_50
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 751
+        width: 97
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3bad9498cb39b84488cc652fee2471f
+      internalID: 773235820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_52
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 772
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 628bb389c0a0b024e8dc03f8171c9b4f
+      internalID: -1176184811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_53
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 708
+        width: 112
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b70983bdc646784a8113cf1605fb89d
+      internalID: 1992121500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_54
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 743
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cf7f8149bdf6854f96b3e68b167860d
+      internalID: -464050623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_59
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 720
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6af923ad43a7e574289c21dc0d7c432e
+      internalID: -2033473792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_60
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 704
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d9c478c85208044c9593b7db7af332c
+      internalID: -1503175678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_61
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 708
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fdbc6847df5200439332567eb622b14
+      internalID: 186336906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_62
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 541
+        width: 26
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 631442ff19f5cfe45af6e47f255852e0
+      internalID: 1859073500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_63
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 541
+        width: 26
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b32a84fff6c5571459841408b4c64142
+      internalID: 2047262794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_64
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 541
+        width: 24
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1b9e08fc4ff6ec4ea8d45018a812b5e
+      internalID: -271450127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_65
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 541
+        width: 26
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4537ce3d4add77e48a58f01b449575f2
+      internalID: -1369382548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_66
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 682
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f32f7739d33af4a4696451e7c7501faa
+      internalID: 1803163484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_67
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 685
+        width: 6
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb222674b2005134294e272e9aa87cff
+      internalID: -861721642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_68
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 658
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91a5ba59797bdee459a4d61b50779c7e
+      internalID: 960390966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_69
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 668
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acb88c0299977e14cad635ab9cf83cec
+      internalID: -1344411682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_70
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 653
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31bb3f04239daf142b4836dc5220828b
+      internalID: -1970708558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_71
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 640
+        width: 576
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66af5f0657b647f4abee07b60f99dc6e
+      internalID: -2006327279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_72
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 634
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46b84ef442fe21748898d3197a01c95d
+      internalID: -23737793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_73
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 642
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea6a4cdd14c4a82499050c746bb66927
+      internalID: 1375854268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_74
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 633
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 799f881a088621c4db5cca0b21d639c6
+      internalID: -1765539208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_75
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 626
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c0a94881e5c81645b44d6b880adbc76
+      internalID: -1240940580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_76
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 607
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2480c766ad4b736419f7371ef20dba59
+      internalID: -1604082318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_77
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 616
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af507ab38671af545afe6099716928b7
+      internalID: 1283022812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_78
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 607
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be18806c7f231f143bafd049ca6d4f74
+      internalID: 670369699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_79
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 583
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b74022cc3906ba4d9e9eb0f689e9abb
+      internalID: 2063878109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_80
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 590
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c60d241b1386aab49bc1794fc90955fa
+      internalID: -505958388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_81
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 581
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6febee7203cc1404c91b48eef862fb39
+      internalID: -549625619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_82
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 549
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5f0a581624349d40a3180fadd559880
+      internalID: 1650454876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_83
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 551
+        width: 8
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc04fab3f9814ba43a043d09db38dcbf
+      internalID: 342477385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_84
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 351
+        width: 576
+        height: 225
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 392cb3b59eea29b4aa961cc22b64f9f3
+      internalID: -1454774642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_85
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 525
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaee7ff391bccb84b9f3d0dbf0778d8a
+      internalID: 680255159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_86
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 537
+        width: 5
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c12734f03f92894599434546f7cf8fa
+      internalID: -1517960918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_87
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 520
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ff951bb37bc9044c9cf1959bcfbe7ed
+      internalID: -2050715876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_88
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 520
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a625e15152dd2ca4f9a7a3978c4fdfbb
+      internalID: -160650372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_89
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 520
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b8b278acffb78a4c9f7e7b526552485
+      internalID: 783578933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_90
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 520
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a924f1de56b676b42a0af853dda52348
+      internalID: 122824200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_91
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 525
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c350be6406fc1346bb156167425389a
+      internalID: -1919470752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_92
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 516
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dc192b979ce27b4a9fad767162b625c
+      internalID: 652609043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KHA_FB_93
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 513
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d8a5ebb5ce25f441bc2fb691a5829ba
+      internalID: -1536298805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      KHA_FB_0: 1401278008
+      KHA_FB_1: 275620372
+      KHA_FB_10: 1364779552
+      KHA_FB_11: -240396902
+      KHA_FB_12: 170040673
+      KHA_FB_13: -514348999
+      KHA_FB_14: -166432342
+      KHA_FB_15: 1150718994
+      KHA_FB_16: -1759701648
+      KHA_FB_17: 1630925737
+      KHA_FB_18: -1363183747
+      KHA_FB_19: 1502460464
+      KHA_FB_2: -609114846
+      KHA_FB_20: 1123131746
+      KHA_FB_21: 142340523
+      KHA_FB_22: 1969252004
+      KHA_FB_23: 877294730
+      KHA_FB_24: -640106656
+      KHA_FB_25: -230778859
+      KHA_FB_26: 906808019
+      KHA_FB_27: -1029868470
+      KHA_FB_28: 1887775053
+      KHA_FB_29: -1262466580
+      KHA_FB_3: -711625653
+      KHA_FB_30: -789215085
+      KHA_FB_31: -777209611
+      KHA_FB_32: 77954131
+      KHA_FB_33: 530723319
+      KHA_FB_34: -1573401651
+      KHA_FB_35: -1304050011
+      KHA_FB_36: -1111323204
+      KHA_FB_37: -1451124552
+      KHA_FB_38: -79730032
+      KHA_FB_39: 482759417
+      KHA_FB_4: 2071172864
+      KHA_FB_40: -1687096097
+      KHA_FB_41: -1422273041
+      KHA_FB_42: 936157140
+      KHA_FB_43: -642781082
+      KHA_FB_44: 1757619119
+      KHA_FB_45: -2024185955
+      KHA_FB_46: -460018124
+      KHA_FB_47: -695858409
+      KHA_FB_48: 1487836171
+      KHA_FB_49: 2086126773
+      KHA_FB_5: 1880281239
+      KHA_FB_50: 773235820
+      KHA_FB_51: 1567746986
+      KHA_FB_52: -1176184811
+      KHA_FB_53: 1992121500
+      KHA_FB_54: -464050623
+      KHA_FB_55: -1962008720
+      KHA_FB_56: 1040443453
+      KHA_FB_57: 418851477
+      KHA_FB_58: -367912527
+      KHA_FB_59: -2033473792
+      KHA_FB_6: 854560881
+      KHA_FB_60: -1503175678
+      KHA_FB_61: 186336906
+      KHA_FB_62: 1859073500
+      KHA_FB_63: 2047262794
+      KHA_FB_64: -271450127
+      KHA_FB_65: -1369382548
+      KHA_FB_66: 1803163484
+      KHA_FB_67: -861721642
+      KHA_FB_68: 960390966
+      KHA_FB_69: -1344411682
+      KHA_FB_7: -741689452
+      KHA_FB_70: -1970708558
+      KHA_FB_71: -2006327279
+      KHA_FB_72: -23737793
+      KHA_FB_73: 1375854268
+      KHA_FB_74: -1765539208
+      KHA_FB_75: -1240940580
+      KHA_FB_76: -1604082318
+      KHA_FB_77: 1283022812
+      KHA_FB_78: 670369699
+      KHA_FB_79: 2063878109
+      KHA_FB_8: -1731911368
+      KHA_FB_80: -505958388
+      KHA_FB_81: -549625619
+      KHA_FB_82: 1650454876
+      KHA_FB_83: 342477385
+      KHA_FB_84: -1454774642
+      KHA_FB_85: 680255159
+      KHA_FB_86: -1517960918
+      KHA_FB_87: -2050715876
+      KHA_FB_88: -160650372
+      KHA_FB_89: 783578933
+      KHA_FB_9: 1346319503
+      KHA_FB_90: 122824200
+      KHA_FB_91: -1919470752
+      KHA_FB_92: 652609043
+      KHA_FB_93: -1536298805
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

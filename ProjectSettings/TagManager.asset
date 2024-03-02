@@ -9,6 +9,7 @@ TagManager:
   - Salida
   - JumpPad
   - GroundCheck
+  - Camera
   layers:
   - Default
   - TransparentFX
