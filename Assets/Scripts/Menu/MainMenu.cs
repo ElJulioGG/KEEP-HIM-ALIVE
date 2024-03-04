@@ -20,6 +20,7 @@ public class MainMenu : MonoBehaviour
     public Button MenuSelec;
     public Button MenuCredits;
     public Button MenuClose;
+    public Button MenuMinigame;
 
     IEnumerator IniciarMenu;
     IEnumerator IntroducirCorrutina;
@@ -134,6 +135,7 @@ public class MainMenu : MonoBehaviour
         MenuSelec.interactable = false;
         MenuCredits.interactable = false;
         MenuClose.interactable = false;
+        MenuMinigame.interactable = false;
     }
     private void habilitarBotonesMenu()
     {
@@ -141,6 +143,8 @@ public class MainMenu : MonoBehaviour
         MenuSelec.interactable = true;
         MenuCredits.interactable = true;
         MenuClose.interactable = true;
+        MenuMinigame.interactable = true;
+
     }
     public void SalirJuego() {
         Application.Quit();
@@ -148,6 +152,13 @@ public class MainMenu : MonoBehaviour
     public void EscenaCred()
     {
         //SceneManager.LoadScene("Creditos");
+    }
+
+    public void EscenaMinigame()
+    {
+        musicStoped = true;
+        AudioManager.instance.musicSource.Stop();
+        SceneManager.LoadScene("MiniGame");
     }
 
     void transitionSelecNivel()
